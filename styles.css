@@ -1,0 +1,247 @@
+/* Global Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b; /* Dark background */
+    color: #fff; /* White fonts */
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Background Shapes */
+body::before, body::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 193, 7, 0.2); /* Transparent Yellow */
+    z-index: -1;
+    animation: floatShape 15s ease-in-out infinite;
+}
+
+body::before {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    left: -100px;
+}
+
+body::after {
+    width: 300px;
+    height: 300px;
+    bottom: -150px;
+    right: -150px;
+    background-color: rgba(0, 31, 63, 0.3); /* Transparent Navy */
+}
+
+/* Extra floating shapes */
+.shape {
+    position: absolute;
+    background-color: rgba(255, 193, 7, 0.4); /* Yellow Shape */
+    border-radius: 50%;
+    animation: floatShape 10s ease-in-out infinite;
+    z-index: -1;
+}
+
+.shape1 {
+    width: 200px;
+    height: 200px;
+    top: 50px;
+    right: 10%;
+}
+
+.shape2 {
+    width: 150px;
+    height: 150px;
+    bottom: 10%;
+    left: 5%;
+    background-color: rgba(0, 31, 63, 0.5); /* Navy Shape */
+}
+
+/* Animations */
+@keyframes floatShape {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+/* Header Styling */
+header {
+    background-color: #333; /* New header color */
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #ffc107; /* Yellow */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fff; /* White hover effect */
+}
+
+/* Section Styling */
+section {
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1000px;
+    background-color: #282828; /* Darker shade for section backgrounds */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* About Section */
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffc107; /* Yellow heading */
+}
+
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ddd; /* Light gray text */
+}
+
+/* Skills Section */
+#skills h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #ffc107; /* Yellow heading */
+}
+
+.skill {
+    margin-bottom: 1rem;
+}
+
+.skill-bar {
+    background-color: #444;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level {
+    background-color: #ffc107; /* Yellow for skill level */
+    text-align: center;
+    color: #fff;
+    padding: 0.5rem 0;
+}
+
+/* Projects Section */
+#projects {
+    text-align: center;
+}
+
+.project-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: #444;
+    border-radius: 8px;
+    margin: 1rem;
+    padding: 1rem;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ffc107; /* Yellow */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #fff; /* White on hover */
+    color: #333; /* Dark text on hover */
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 2rem;
+    text-align: center;
+}
+
+.testimonial {
+    margin: 1rem 0;
+    font-style: italic;
+    color: #ddd; /* Light gray */
+}
+
+/* Contact Form */
+#contact {
+    padding: 2rem;
+    text-align: center;
+    background-color: #282828;
+    border-radius: 8px;
+    margin: 2rem auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input, textarea {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: 80%; /* Adjust as needed */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 1rem;
+    background-color: #ffc107; /* Yellow */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #fff; /* White on hover */
+    color: #333; /* Dark text on hover */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333; /* Footer color */
+    color: #fff;
+}
+
